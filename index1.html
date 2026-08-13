@@ -13,13 +13,16 @@
                 const data=await res.json();
                 console.log("DATA",data.products);
                 const rows=data.products.map(i=>`<tr>
+                    <td>${i.index}</td>
                     <td>${i.title}</td>
                     <td>${i.category}</td>
                     <td>${i.rating}</td>
                     <td>${i.price}</td>
                     <td>${i.stock}</td>
-                </tr>`).join('');
-                document.getElementById('data').innerHTML=rows;
+                    </tr>`).join('');
+                    document.getElementById('data').innerHTML=rows;
+                    const el=document.getElementById("data")
+                    el.innerHTML
             }
             catch(err){
                 console.log("Error: ",err)
