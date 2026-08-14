@@ -14,9 +14,8 @@
 <script>
     function addPara() {
         const para = document.createElement("p");
-        para.innerText = "This new paragraph is added by DOM";
-        const parent = document.getElementById("root");
-        parent.appendChild(para);
+        para.textContent = "This is a new paragraph added to the DOM.";             
+        document.getElementById("root").appendChild(para);
     }
 </script>
 </html>
